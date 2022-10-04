@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_3</title>
+    <link rel="stylesheet" href="indexCSS.css">
+</head>
+
+<body>
+    <div class="whole-container">
+        <div class="input-container">
+            <div class="container" id="container">
+                <div id="container-content" class="container-content">
+                    <input type="text" id="name" class="name" placeholder="Enter your name">
+                    <input type="text" id="age" class="age"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="2"
+                        placeholder="Enter your age">
+                    <input type="text" id="mark" class="mark"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="3"
+                        placeholder="Enter your mark">
+                    <button type="submit" id="add" class="add" value="add" onclick="addData()">+</button>
+                </div>
+            </div>
+            <div class="button-container">
+                <div class="container-click-content" id="container-click-content">
+                    <button type="submit" id="submit" class="submit" value="submit" onclick="submitData()">Submit</button>
+                    <button type="reset" id="clear" class="clear" value="clear" onclick="resetData()">Clear All</button>
+                </div>
+            </div>
+        </div>
+        <div class="table-container" id="table-container">
+            <table id="table" border = 2>
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Name</th>
+                        <th onclick="sortTable(1)">Age</th>
+                        <th onclick="sortTable(2)">Mark</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body-data">
+                    
+                </tbody>
+            </table>
+            <div id="page-navigation" class="page-navigation">
+                <a href="javascript:prevPage()" id="btn_prev">
+                    <button>Previous</button>
+                </a>
+                <button id="page"></button>
+                <a href="javascript:nextPage()" id="btn_next">
+                    <button>Next</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="indexJS.js"></script>
+</body>
+
+</html>
